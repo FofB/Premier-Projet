@@ -1,5 +1,6 @@
 
-Masterclass  Open Data Tbilisi, Géorgia - juillet 2018<https://github.com/FofB/Premier-Projet/blob/master/image.png>
+Masterclass  Open Data Tbilisi, Géorgia - juillet 2018 
+<https://github.com/FofB/Premier-Projet/blob/master/image.png>
 ========================================================
 author: groupeRbase
 date: 15/07/2018
@@ -21,6 +22,7 @@ Pour cet exercice pratique, nous travaillerons sur une bases de données issue d
 Il s'agit de la base de données sur l'espérance de vie dans le monde sur 50 ans (1955-20100)
 
 ========================================================
+
 Le principe de R ce sont les librairies qui permettent de faire plusieurs manipulations. 
 Dans notre cas, nous allons utiliser quelques fonctions de la librairie tidyvers. Pour ce faire, nous allons charger au préalable, cette librarie. Cette librairie chargent plusieurs fonctions utiles dont ggplot et readr.
 
@@ -79,6 +81,7 @@ names(BDD_Vie)<-c("Pays", "Année", "Variant", "Esperance")
 
 Etape: Suppréssion d'une variable et création d'une nouvelle base de données
 ==========
+
 Pour nos manipulations la variable "variant" ne nous intéresse pas. Nous allons donc l'enlever en utilisant la fonction (subset). Le résultat de cette manipulation sera stocker dans une nouvelle variable que nous appelerons (NewBDD_Vie). 
 
 ```r
@@ -99,6 +102,7 @@ summary(BDD_Vie$Esperance)
 ```
 
 ================
+
 On constate dans les résultats, une valeur 960 correspondant à NA (Not Available). Cela signifie qu'il existe des pays dont l'espérance de vie n'est pas renseignée pour certaines périodes. l'idéal est de rétirer ces valeurs avant d'opérer les calculs. Pour cela, on utilise la fonction na.omit
 
 ```r
