@@ -1,6 +1,6 @@
 
 Masterclass  Open Data Tbilisi, Géorgia - juillet 2018 
-<https://github.com/FofB/Premier-Projet/blob/master/image.png>
+Premier-Projet/image.png
 ========================================================
 author: groupeRbase
 date: 15/07/2018
