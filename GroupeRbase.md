@@ -8,7 +8,6 @@ autosize: true
 
        CAS PRATIQUE D'UTILISATION DU LOGICIEL R
 ==================================================
-
 Pour cet exercice pratique, nous travaillerons sur une bases de données issue de http://data.un.org/
 Il s'agit de la base de données sur l'espérance de vie dans le monde sur 150 ans (1950-2100). 
 
