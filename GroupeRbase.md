@@ -278,7 +278,9 @@ Bibliographie sommaire
 ==============================
 
 https://cran.r-project.org/ pour le téléchargement du logiciel pour toutes les plateformes
-https://juba.github.io/tidyverse/index.html(documentation assez exhaustive sur la librairie tidyverse)
+
+https://juba.github.io/tidyverse/index.html (documentation assez exhaustive sur la librairie tidyverse)
+
 https://cran.r-project.org/web/packages/available_packages_by_name.html (organisation des packages par nom)
 
 
