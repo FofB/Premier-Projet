@@ -8,10 +8,12 @@ autosize: true
 
        CAS PRATIQUE D'UTILISATION DU LOGICIEL R
 ==================================================
+
 Pour cet exercice pratique, nous travaillerons sur une bases de données issue de http://data.un.org/
 Il s'agit de la base de données sur l'espérance de vie dans le monde sur 150 ans (1950-2100). 
 
 ========================================================
+
 Le principe de R ce sont les librairies qui permettent de faire plusieurs manipulations. 
 Dans notre cas, nous allons utiliser quelques fonctions de la librairie tidyvers. Pour ce faire, nous allons charger au préalable, cette librarie. Cette librairie chargent plusieurs fonctions utiles dont ggplot et readr.
 
@@ -70,6 +72,8 @@ names(BDD_Vie)<-c("Pays", "Année", "Variant", "Esperance")
 
 Etape: Suppréssion d'une variable et création d'une nouvelle base de données
 ==========
+
+
 Pour nos manipulations la variable "variant" ne nous intéresse pas. Nous allons donc l'enlever en utilisant la fonction (subset). Le résultat de cette manipulation sera stocker dans une nouvelle variable que nous appelerons (NewBDD_Vie). 
 
 ```r
@@ -104,6 +108,7 @@ Nous avons retirer ces valeurs NA, le resultat ainsi obtenu reflette mieux la r�
 Etape: Et la suite???
 
 ==================================
+
 nous connaissons l'espérance de vie minimale et celle maximale, ainsi que celle moyenne. Cependant nous ne savons ni l'année, ni le ou les pays . L'étape présente va indiquer ces données. il existe plusieurs fonctions pour arriver à ce résultat, mais nous utiliserons ici la fonction filter. 
 
 ```r
@@ -129,6 +134,7 @@ filter(na.omit(NewBDD_Vie), Esperance==94.5)
 ```
 
 ==========================================
+
 il est possible de créer une nouvelle base de données issues de la base de données NewBDD_Vie qui contient uniquement quelques pays. Nous allons nommée cette nouvelle base, (Af_Esp).
 
 
