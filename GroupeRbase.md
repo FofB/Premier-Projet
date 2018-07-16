@@ -161,6 +161,8 @@ list(Af_Esp)
 ```
 
 =================================
+
+
 Il est possible ensuite à partir de cette selection, d'effectuer quelques analyses/statistiques descriptives.
 
 ```r
@@ -200,9 +202,11 @@ filter(Af_Esp, Esperance==78.79)
 ```
 
 ================================
+
 La fonction summary permet d'avoir un aperçu de quelques valeurs significatives de la base de données. Il s'agit notamment de la moyenne, de l'espérance de vie maximale, minimale entre autres. 
 
 ================================
+
 En utilisant ces valeurs connues, il est ensuite possible grace à la fonction filter de connaitre en quelle année et quel pays avait l'espérance de vie la basse vs celle la plus hausse. 
 On va éffectuer un filtre pour retenir les données sur uniquement les périodes (1960-65 et 2010-2015). On créera une nouvelle base de données pour chacune des périodes. 
 
