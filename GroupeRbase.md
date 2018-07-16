@@ -12,7 +12,7 @@ Pour cet exercice pratique, nous travaillerons sur une bases de données issue d
 Il s'agit de la base de données sur l'espérance de vie dans le monde sur 150 ans (1950-2100). 
 
 
-Le principe de R ce sont les librairies qui permettent de faire plusieurs manipulations. 
+Le principe de R ce sont des fonctions contenues dans des librairies. 
 Dans notre cas, nous allons utiliser quelques fonctions de la librairie tidyvers. Pour ce faire, nous allons charger au préalable, cette librarie. Cette librairie chargent plusieurs fonctions utiles dont ggplot et readr.
 
 
