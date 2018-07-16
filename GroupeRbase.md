@@ -7,12 +7,10 @@ autosize: true
 
 
        CAS PRATIQUE D'UTILISATION DU LOGICIEL R
-==================================================
 
 Pour cet exercice pratique, nous travaillerons sur une bases de données issue de http://data.un.org/
 Il s'agit de la base de données sur l'espérance de vie dans le monde sur 150 ans (1950-2100). 
 
-========================================================
 
 Le principe de R ce sont les librairies qui permettent de faire plusieurs manipulations. 
 Dans notre cas, nous allons utiliser quelques fonctions de la librairie tidyvers. Pour ce faire, nous allons charger au préalable, cette librarie. Cette librairie chargent plusieurs fonctions utiles dont ggplot et readr.
@@ -24,7 +22,6 @@ library(tidyverse)
 
 Après avoir charger la librairie tidyverse, nous allons charger notre base de données. Les instructions pour le chargement de la base de données sont indiquées ci-dessous. 
 
-======================
 
 ```r
 library(readr)
@@ -93,7 +90,6 @@ summary(BDD_Vie$Esperance)
   14.49   65.36   73.97   71.69   81.24   94.50     960 
 ```
 
-================
 On constate dans les résultats, une valeur 960 correspondant à NA (Not Available). Cela signifie qu'il existe des pays dont l'espérance de vie n'est pas renseignée pour certaines périodes. l'idéal est de rétirer ces valeurs avant d'opérer les calculs. Pour cela, on utilise la fonction na.omit
 
 ```r
@@ -105,8 +101,8 @@ summary(na.omit(BDD_Vie$Esperance))
   14.49   65.36   73.97   71.69   81.24   94.50 
 ```
 Nous avons retirer ces valeurs NA, le resultat ainsi obtenu reflette mieux la réalité. l'espérance de vie minimum est de 14.59 ans et celle maximum est 94.5 ans. 
-Etape: Et la suite???
 
+Etape: Et la suite???
 ==================================
 
 nous connaissons l'espérance de vie minimale et celle maximale, ainsi que celle moyenne. Cependant nous ne savons ni l'année, ni le ou les pays . L'étape présente va indiquer ces données. il existe plusieurs fonctions pour arriver à ce résultat, mais nous utiliserons ici la fonction filter. 
@@ -133,16 +129,12 @@ filter(na.omit(NewBDD_Vie), Esperance==94.5)
 1 China Macao SAR 2095-2100      94.5
 ```
 
-==========================================
-
 il est possible de créer une nouvelle base de données issues de la base de données NewBDD_Vie qui contient uniquement quelques pays. Nous allons nommée cette nouvelle base, (Af_Esp).
 
 
 ```r
 Af_Esp<-(filter(NewBDD_Vie, Pays==c("Guinea", "Cameroon", "Niger", "Burkina Faso", "Senegal", "Madagascar", "Togo", "Chad","Benin")))
 ```
-
-================================
 
 ```r
 list(Af_Esp)
@@ -165,9 +157,6 @@ list(Af_Esp)
 10 Cameroon     1985-1990      52.8
 # ... with 19 more rows
 ```
-
-=================================
-
 
 Il est possible ensuite à partir de cette selection, d'effectuer quelques analyses/statistiques descriptives.
 
@@ -207,37 +196,22 @@ filter(Af_Esp, Esperance==78.79)
 1 Senegal 2075-2080      78.8
 ```
 
-================================
-
 La fonction summary permet d'avoir un aperçu de quelques valeurs significatives de la base de données. Il s'agit notamment de la moyenne, de l'espérance de vie maximale, minimale entre autres. 
-
-================================
 
 En utilisant ces valeurs connues, il est ensuite possible grace à la fonction filter de connaitre en quelle année et quel pays avait l'espérance de vie la basse vs celle la plus hausse. 
 On va éffectuer un filtre pour retenir les données sur uniquement les périodes (1960-65 et 2010-2015). On créera une nouvelle base de données pour chacune des périodes. 
-
-==================================
-
 
 ```r
 Période1<-(filter(na.omit(NewBDD_Vie), Année=="1960-1965"))
 ```
 
-
 ```r
 Période3<-(filter(na.omit(NewBDD_Vie), Année=="2015-2020"))
 ```
 
-==================================
-
-
 ```r
 Période2<-(filter(na.omit(NewBDD_Vie), Année=="2010-2015"))
 ```
-
-==================================
-
-
 ```r
 list(Période1)
 ```
@@ -259,9 +233,6 @@ list(Période1)
 10 Asia                1960-1965      46.5
 # ... with 231 more rows
 ```
-
-==================================
-
 ```r
 list(Période2)
 ```
@@ -283,9 +254,6 @@ list(Période2)
 10 Asia                2010-2015      71.8
 # ... with 231 more rows
 ```
-
-================================
-
 ```r
 list(Période3)
 ```
