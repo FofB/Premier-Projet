@@ -47,7 +47,6 @@ Etape: On utilise glimpse pour avoir une idée de comment est organisée notre B
 ```r
 glimpse(BDD_Vie)
 ```
-
 ```
 Observations: 8,190
 Variables: 4
@@ -110,7 +109,6 @@ nous connaissons l'espérance de vie minimale et celle maximale, ainsi que celle
 ```r
 filter(na.omit(NewBDD_Vie), Esperance==14.49)
 ```
-
 ```
 # A tibble: 1 x 3
   Pays     Année     Esperance
